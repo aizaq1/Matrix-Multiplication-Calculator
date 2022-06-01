@@ -14,14 +14,24 @@ label {
     font-size: 20px;
     color:rgb(55, 45, 37);
 	font-family: Special Elite; 
+    text-align: center;
 }
 
-select {
+#m1rows, #m1cols, #m2rows, #m2cols {
     margin: 20px;
     height: 40px;
     width: 60px;
     border-radius: 50%;
+    
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    align-items: center;
 }
 
 form {
