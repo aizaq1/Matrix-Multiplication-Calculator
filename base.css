@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto Mono', monospace;  
+}
+
+body {
+    height: 100%;
+    background: rgb(183, 177, 177);
+}
+
+label {
+    font-size: 20px;
+    color:rgb(55, 45, 37);
+	font-family: Special Elite; 
+}
+
+select {
+    margin: 20px;
+    height: 40px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 100px;
+    margin: 100px;
+}
+
+@media (max-width: 200px){
+    form {
+        flex-direction: row;
+        text-align: center;
+    }
+}
+
+@media (max-height: 500px){
+    form {
+        flex-direction: row;
+        text-align: center;
+    }
+}
+
+#m1submitButton {
+    padding: 10px;
+    border-color: bisque;
+    color: #fff;
+    background-color: cornflowerblue;
+    height: 40px;
+    width: 80px;
+    border-radius: 100%;
+}
+
+#m1submitButton:hover {
+    background-color: darksalmon;
+}
+
