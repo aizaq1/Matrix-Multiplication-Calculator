@@ -2,7 +2,8 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto Mono', monospace;  
+    font-family: 'Roboto Mono', monospace; 
+    line-height: 1em; 
 }
 
 body {
@@ -15,6 +16,18 @@ label {
     color:rgb(55, 45, 37);
 	font-family: Special Elite; 
     text-align: center;
+}
+
+.rules {
+    color: maroon;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 18px;
+    width: 500px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #m1rows, #m1cols, #m2rows, #m2cols {
@@ -40,7 +53,7 @@ form {
     justify-content: space-between;
     align-items: center;
 
-    padding: 100px;
+    padding: 50px 100px 100px 100px;
     margin: 100px;
 }
 
@@ -72,3 +85,6 @@ form {
     background-color: darksalmon;
 }
 
+.error {
+    color: red;
+}
