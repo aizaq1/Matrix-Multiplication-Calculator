@@ -71,7 +71,7 @@ form {
     }
 }
 
-#m1submitButton {
+.formButton {
     padding: 10px;
     border-color: bisque;
     color: #fff;
@@ -81,7 +81,7 @@ form {
     border-radius: 100%;
 }
 
-#m1submitButton:hover {
+.formButton:hover {
     background-color: darksalmon;
 }
 

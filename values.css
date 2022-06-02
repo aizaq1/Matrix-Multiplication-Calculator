@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto Mono', monospace; 
+    line-height: 1em; 
+}
+
+body {
+    height: 100%;
+    background: rgb(183, 177, 177);
+}
+
+.returnButton {
+    padding: 10px;
+    border-color: bisque;
+    color: #fff;
+    background-color: cornflowerblue;
+    height: 55px;
+    width: 110px;
+    border-radius: 100%;
+}
