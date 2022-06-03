@@ -9,14 +9,14 @@ const m2cols = document.getElementById("m2cols");
 const rules = document.querySelector(".rules");
 const form = document.querySelector("#rowColCountForm");
 
-const valueBoxesForm = document.querySelector(".valueBoxesForm");
+const valueBoxesArea = document.querySelector(".valueBoxesArea");
 const buttonArea = document.querySelector(".buttonArea");
 const solutionArea = document.querySelector(".solution");
 
 form.addEventListener("submit", checkValid);
 
 function checkValid(err){
-    valueBoxesForm.innerHTML = "";
+    valueBoxesArea.innerHTML = "";
     err.preventDefault();
     
     if (m1cols.value != m2rows.value){
@@ -32,52 +32,76 @@ function checkValid(err){
     }     
     else 
         runCalculator();       
-
 }
 
 function runCalculator(){
     createValueBoxes(m1rows.value, m1cols.value, m2rows.value, m2cols.value);     
-    createRefreshButton();
+    createRefreshButton(false);
     createResetButton();
     createCalculateButton(m1rows.value, m1cols.value, m2rows.value, m2cols.value);
 }
 
-function createValueBoxes(m1rows, m1cols, m2rows, m2cols){
+function createValueBoxes(m1r, m1c, m2r, m2c){
+    let matrix1 = new Array(m1r);
+    for (let i = 0; i < m1r; i++)
+        matrix1[i] = new Array(m1c);
+
+    let matrix2 = new Array(m2r);
+    for (let i = 0; i < m2r; i++)
+        matrix2[i] = new Array(m2c);
+
     // Matrix 1
-    valueBoxesForm.innerHTML += '<p class="valueBoxTitle">Matrix 1</p>'
-    for (let i = 1; i <= m1rows; i++) {
-        for (let j = 1; j <= m1cols; j++)
-            valueBoxesForm.innerHTML += `<input type="number" class="valueBox" id="m1valueBox${i}${j}" value="0"></input>`;
-        valueBoxesForm.innerHTML += "<div></div>";
+    valueBoxesArea.innerHTML += '<p class="valueBoxTitle">Matrix 1</p>'
+    for (let i = 1; i <= m1r; i++) {
+        for (let j = 1; j <= m1c; j++)
+            valueBoxesArea.innerHTML += `<input type="number" class="valueBox" id="m1valueBox${i}${j}" value="0"></input>`;
+        valueBoxesArea.innerHTML += "<div></div>";
     }
+    console.log(matrix1);
+    
     // Matrix 2
-    valueBoxesForm.innerHTML += '<p class="valueBoxTitle">Matrix 2</p>';
-    for (let i = 1; i <= m2rows; i++) {
-        for (let j = 1; j <= m2cols; j++)
-            valueBoxesForm.innerHTML += `<input type="number" class="valueBox" id="m2valueBox${i}${j}" value="0"></input>`;
-        valueBoxesForm.innerHTML += "<div></div>";
+    valueBoxesArea.innerHTML += '<p class="valueBoxTitle">Matrix 2</p>';
+    for (let i = 1; i <= m2r; i++) {
+        for (let j = 1; j <= m2c; j++)
+            valueBoxesArea.innerHTML += `<input type="number" class="valueBox" id="m2valueBox${i}${j}" value="0"></input>`;
+        valueBoxesArea.innerHTML += "<div></div>";
     }    
+    console.log(matrix2);
 
     rules.remove();
     form.remove();
 }
 
-function createRefreshButton(){
-    valueBoxesForm.innerHTML += '<a href="dimensions.html"><button class="refreshButton">Back to Dimensions</button></a>';
+function createRefreshButton(calculated){
+    if (!calculated)
+        valueBoxesArea.innerHTML += '<a href="dimensions.html"><button class="refreshButton">Back to Dimensions</button></a>';
+    else
+        valueBoxesArea.innerHTML += '<a href="dimensions.html"><button class="refreshButton">Calculate Another!</button></a>';
 }
 
 function createResetButton(){
-    valueBoxesForm.innerHTML += '<button class="resetButton" type="reset">Reset</button>';
+    valueBoxesArea.innerHTML += '<button class="resetButton" type="reset">Reset</button>';
 }
 
 function createCalculateButton(){
-    valueBoxesForm.innerHTML += '<button class="calculateButton" type="submit">Calculate!</button>';
+    valueBoxesArea.innerHTML += '<button class="calculateButton" type="submit">Calculate!</button>';
     const calculateButton = document.querySelector(".calculateButton");
     calculateButton.addEventListener("click", calculateProduct);
 }
 
-function calculateProduct(m1rows, m1cols, m2rows, m2cols){
-    // valueBoxesForm.remove();
+function calculateProduct(m1r, m1c, m2r, m2c){
+    console.log(m1r);
+    for (let i = 1; i <= m1r; i++) {
+        for (let j = 1; j <= m2c; j++){
+            for (let k = 1; k <= m1c; k++)
+                for (let l = 1; l <= m2r; l++)  
+                    console.log(k+l * l+k);  
+                    solutionArea.innerHTML += `<input type="number" value="${document.querySelector(`#m1ValueBox${k}${l}`).value * document.querySelector(`#m1ValueBox${l}${k}`).value}"></input>`;
+            solutionArea.innerHTML += "<div></div>";
+        }
+    }
+
+    createRefreshButton(true);
 
 
     // solutionArea.innerHTML += (document.querySelector(`#m1ValueBox${i}${l - 1}`).value
