@@ -37,6 +37,7 @@ label {
     border-radius: 50%;
     
     text-align: center;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -57,20 +58,6 @@ form {
     margin: 100px;
 }
 
-@media (max-width: 200px){
-    form {
-        flex-direction: row;
-        text-align: center;
-    }
-}
-
-@media (max-height: 500px){
-    form {
-        flex-direction: row;
-        text-align: center;
-    }
-}
-
 .formButton {
     padding: 10px;
     border-color: bisque;
@@ -87,4 +74,18 @@ form {
 
 .error {
     color: red;
+}
+
+.valueBox {
+    margin: 5px;
+    height: 40px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+.valueBoxTitle {
+    padding: 10px;
+    text-align: center;
 }
