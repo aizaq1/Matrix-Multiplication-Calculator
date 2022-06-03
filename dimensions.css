@@ -2,13 +2,17 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto Mono', monospace; 
+    font-family: Special Elite; 
     line-height: 1em; 
 }
 
 body {
     height: 100%;
     background: rgb(183, 177, 177);
+}
+
+a {
+    text-decoration: none;
 }
 
 label {
@@ -48,7 +52,7 @@ input {
     align-items: center;
 }
 
-form {
+#rowColCountForm {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -72,6 +76,19 @@ form {
     background-color: darksalmon;
 }
 
+.refreshButton, .resetButton, .calculateButton {
+    margin: 10px;
+    padding: 20px;
+    border-color: bisque;
+    color: #fff;
+    background-color: cornflowerblue;
+    height: 50px;
+    width: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .error {
     color: red;
 }
@@ -82,7 +99,6 @@ form {
     width: 60px;
     border-radius: 50%;
     text-align: center;
-    align-items: center;
 }
 
 .valueBoxTitle {
