@@ -43,9 +43,6 @@ function runCalculator(){
 }
 
 function createValueBoxes(m1r, m1c, m2r, m2c){
-    let matrix1 = createAndInitializeMatrix(m1r, m1c);
-    let matrix2 = createAndInitializeMatrix(m2r, m2c);
-
     // Matrix 1
     valueBoxesArea.innerHTML += '<p class="valueBoxTitle">Matrix 1</p>'
     for (let i = 0; i < m1r; i++) {
@@ -53,8 +50,7 @@ function createValueBoxes(m1r, m1c, m2r, m2c){
             valueBoxesArea.innerHTML += `<input type="number" class="valueBox" id="m1valueBox${i}${j}" value="0"></input>`;
         valueBoxesArea.innerHTML += "<div></div>";
     }
-    // console.log(matrix1);
-    
+
     // Matrix 2
     valueBoxesArea.innerHTML += '<p class="valueBoxTitle">Matrix 2</p>';
     for (let i = 0; i < m2r; i++) {
@@ -62,8 +58,7 @@ function createValueBoxes(m1r, m1c, m2r, m2c){
             valueBoxesArea.innerHTML += `<input type="number" class="valueBox" id="m2valueBox${i}${j}" value="0"></input>`;
         valueBoxesArea.innerHTML += "<div></div>";
     }    
-    // console.log(matrix2);
-
+    
     rules.remove();
     form.remove();
 }
