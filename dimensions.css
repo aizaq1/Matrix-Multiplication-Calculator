@@ -76,7 +76,7 @@ input {
     background-color: darksalmon;
 }
 
-.refreshButton, .resetButton, .calculateButton {
+.refreshButton, .resetButton, .calculateButton, .randomizeMatricesButton {
     margin: 10px;
     padding: 20px;
     border-color: bisque;
