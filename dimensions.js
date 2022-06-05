@@ -12,6 +12,7 @@ const form = document.querySelector("#rowColCountForm");
 const valueBoxesForm = document.querySelector("#valueBoxesForm");
 const buttonArea = document.querySelector(".buttonArea");
 const solutionArea = document.querySelector(".solution");
+const calculateButtonArea = document.querySelector(".calculateButtonArea");
 
 form.addEventListener("submit", checkValid);
 
@@ -87,8 +88,9 @@ function createResetButton(){
 // }
 
 function createCalculateButton(){
-    valueBoxesForm.innerHTML += '<button class="calculateButton" type="submit">Calculate the Product!</button>';
-    valueBoxesForm.addEventListener("submit", calculateProduct);
+    calculateButtonArea.innerHTML += '<button class="calculateButton" type="button">Calculate the Product</button>';
+    const calculateButton = document.querySelector(".calculateButton");
+    calculateButton.addEventListener("click", calculateProduct);
 }
 
 function removeCalculateButton(){
@@ -111,9 +113,6 @@ function removeCalculateButton(){
 
 function calculateProduct(err){
     err.preventDefault();
-    
-    removeCalculateButton();
-    createBackButton(true);
 
     let matrix1 = createAndInitializeMatrix(m1rows.value, m1cols.value);
     let matrix2 = createAndInitializeMatrix(m2rows.value, m2cols.value);
@@ -126,6 +125,9 @@ function calculateProduct(err){
 
     console.log(matrix1);
     console.log(matrix2);
+
+    removeCalculateButton();
+    createBackButton(true);
 
     // for (let i = 0; i < m1rows.value; i++) {
     //     for (let j = 0; j < m2cols.value; j++){
