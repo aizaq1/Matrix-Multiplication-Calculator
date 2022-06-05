@@ -12,6 +12,9 @@ body {
 }
 
 a {
+    display: inline-block;
+    line-height: 1em;
+    width: 100px;
     text-decoration: none;
 }
 
