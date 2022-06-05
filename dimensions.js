@@ -87,9 +87,8 @@ function createResetButton(){
 // }
 
 function createCalculateButton(){
-    valueBoxesForm.innerHTML += '<button class="calculateButton" type="button">Calculate the Product!</button>';
-    const calculateButton = document.querySelector(".calculateButton");
-    calculateButton.addEventListener("click", calculateProduct);
+    valueBoxesForm.innerHTML += '<button class="calculateButton" type="submit">Calculate the Product!</button>';
+    valueBoxesForm.addEventListener("submit", calculateProduct);
 }
 
 function removeCalculateButton(){
