@@ -17,7 +17,6 @@ const calculateButtonArea = document.querySelector(".calculateButtonArea");
 form.addEventListener("submit", checkValid);
 
 function checkValid(err){
-    // valueBoxesArea.innerHTML = "";
     err.preventDefault();
     
     if (m1cols.value != m2rows.value)
@@ -148,14 +147,6 @@ function calculateAndDisplayProduct(err){
     removeValueBoxesFormArea();
     removeCalculateButton();
     createBackButton(true);
-}
-
-function scalarScalarProduct(rowVector, columnVector){
-    let scalarProduct = 0;
-    for (let i = 0; i < rowVector.length; i++)
-        scalarProduct += rowVector[i] * columnVector[i];
-    
-    return scalarProduct;
 }
 
 function createAndInitializeMatrix(mr, mc){
