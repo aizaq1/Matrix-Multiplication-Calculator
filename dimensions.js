@@ -40,7 +40,7 @@ function throwDimensionsError(){
 
 function runCalculator(){
     rules.remove();
-    // form.remove();
+    form.remove();
     createValueBoxes(m1rows.value, m1cols.value, m2rows.value, m2cols.value);     
     createBackButton(false);
     createResetButton();
@@ -90,11 +90,15 @@ function createResetButton(){
 function createCalculateButton(){
     calculateButtonArea.innerHTML += '<button class="calculateButton" type="button">Calculate the Product</button>';
     const calculateButton = document.querySelector(".calculateButton");
-    calculateButton.addEventListener("click", calculateProduct);
+    calculateButton.addEventListener("click", calculateAndDisplayProduct);
 }
 
 function removeCalculateButton(){
     document.querySelector(".calculateButton").remove();
+}
+
+function removeValueBoxesFormArea(){
+    valueBoxesForm.remove();
 }
 
 // function randomizeMatrices(){
@@ -111,37 +115,47 @@ function removeCalculateButton(){
 //     //         console.log(document.querySelector(`#m2valueBox${i}${j}`).value);        
 // }
 
-function calculateProduct(err){
+function calculateAndDisplayProduct(err){
     err.preventDefault();
 
+    // Initialize both matrices
     let matrix1 = createAndInitializeMatrix(m1rows.value, m1cols.value);
     let matrix2 = createAndInitializeMatrix(m2rows.value, m2cols.value);
 
-    console.log(matrix1);
-    console.log(matrix2);
-
+    // Update the two matrices with the inputted values
     matrix1 = updateMatrix(matrix1, 1);
     matrix2 = updateMatrix(matrix2, 2);
 
     console.log(matrix1);
     console.log(matrix2);
 
+    // Initialize product matrix of correct size
+    let product = new Array(matrix1.length);  
+
+    for (let i = 0; i < matrix1.length; ++i) {
+        // Make the product array 2D
+        product[i] = new Array(matrix2[0].length); 
+        for (let j = 0; j < matrix2[i].length; ++j) {
+            product[i][j] = 0;             
+            for (let k = 0; k < matrix1[i].length; ++k) 
+                product[i][j] += matrix1[i][k] * matrix2[k][j];
+        }
+    }
+
+    console.log(product);
+
+    // Clean-up
+    removeValueBoxesFormArea();
     removeCalculateButton();
     createBackButton(true);
+}
 
-    // for (let i = 0; i < m1rows.value; i++) {
-    //     for (let j = 0; j < m2cols.value; j++){
-    //         for (let k = 0; k < m1cols.value; k++)
-    //             for (let l = 0; l < m2rows.value; l++)  
-    //                 // console.log(k+l * l+k);  
-    //                 solutionArea.innerHTML += `<input type="number" value="${document.querySelector(`#m1valueBox${k}${l}`).value * document.querySelector(`#m1valueBox${l}${k}`).value}"></input>`;
-    //         solutionArea.innerHTML += "<div></div>";
-    //     }
-    // }
-
-    // solutionArea.innerHTML += (document.querySelector(`#m1valueBox${i}${l - 1}`).value
-    //                         * document.querySelector(`#m2valueBox${l - 1}${j}`).value);
-    // console.log(document.querySelector(`#m1valueBox${i}${l - 1}`));
+function scalarScalarProduct(rowVector, columnVector){
+    let scalarProduct = 0;
+    for (let i = 0; i < rowVector.length; i++)
+        scalarProduct += rowVector[i] * columnVector[i];
+    
+    return scalarProduct;
 }
 
 function createAndInitializeMatrix(mr, mc){
