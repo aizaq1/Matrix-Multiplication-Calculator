@@ -6,37 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrix Multiplication Calculator - Dimensions</title>
     <link rel="stylesheet" href="dimensions.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Special+Elite"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="rules">
-        <ul>
-            <li>All inputs must be positive, and no greater than 10.</li>
-            <li>The number of columns in matrix 1 must be equal to the number of rows in matrix 2.</li>
-        </ul>
+        All inputs must be positive, and no greater than 10. The number of columns in matrix 1 must be equal to the number of rows in matrix 2.
     </div>
     <div class="form">
         <form id="rowColCountForm">
+            <div class="rowColCountFormTitle">Dimensions</div>
             <div class="inputtedDimensions">
                 <label>Number of Rows in Matrix 1</label>
-                <div class="m1rowsError"></div>
                 <input type="number" id="m1rows" value="1" min="1" max="10" oninput="validity.valid||(value='');">            
                 <label>Number of Columns in Matrix 1</label>
-                <div class="m1colsError"></div>
                 <input type="number" id="m1cols" value="1" min="1" max="10" oninput="validity.valid||(value='');">            
                 <label>Number of Rows in Matrix 2</label>
-                <div class="m2rowsError"></div>
                 <input type="number" id="m2rows" value="1" min="1" max="10" oninput="validity.valid||(value='');">            
                 <label>Number of Columns in Matrix 2</label>
-                <div class="m2colsError"></div>
                 <input type="number" id="m2cols" value="1" min="1" max="10" oninput="validity.valid||(value='');">            
             </div>  
-            <button class="formButton" type="reset">Reset</button>
-            <button class="formButton" type="submit">Go!</button>  
+            <button class="resetButton" type="reset">Reset</button>
+            <button class="rowColCountFormSubmitButton" type="submit">Go!</button>  
+            <div class="dimensionErrorArea"></div>
         </form>
         <form id="valueBoxesForm"></form>
-        <div class="calculateButtonArea"></div>
         <div class="solution"></div>
+        <div class="buttonArea"></div>
     </div>
     <script src="dimensions.js"></script>
 </body>

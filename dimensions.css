@@ -2,13 +2,13 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: Special Elite; 
     line-height: 1em; 
 }
 
 body {
-    height: 100%;
-    background: rgb(183, 177, 177);
+    font-family: 'Roboto Mono', monospace;
+    background: rgb(232, 221, 183);
+    color: rgb(3, 22, 115);
 }
 
 a {
@@ -18,41 +18,60 @@ a {
     text-decoration: none;
 }
 
+input, button {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    color: rgb(105, 38, 105);
+}
+
+.rowColCountFormTitle {
+    color: rgb(105, 38, 105);
+    font-size: 26px;
+    text-decoration: wavy;
+    font-weight: bold;
+    margin: 20px;
+    padding: 5px;
+    border-bottom: 1px solid rgb(77, 91, 159);
+}
+
 label {
+    color: rgb(105, 38, 105);
     font-size: 20px;
-    color:rgb(55, 45, 37);
-	font-family: Special Elite; 
     text-align: center;
+    padding: 20px;
+    font-weight: 700;
+    display: block;
+    margin: 0 auto;
 }
 
 .rules {
-    color: maroon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-weight: bold;
     text-align: center;
+    width: 550px;
+    height: 100px;
     padding-top: 100px;
     font-size: 18px;
-    width: 500px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    border: 5px solid rgb(77, 91, 159);
+    background-color: rgb(219, 204, 180);
+    color: rgb(105, 38, 105);
+    box-shadow: 0 15px 15px #5e5d5b;
 }
 
 #m1rows, #m1cols, #m2rows, #m2cols {
-    margin: 20px;
+    margin: 0 auto;
     height: 40px;
     width: 60px;
-    border-radius: 50%;
+    border-radius: 25%;
+    background-color: rgb(216, 206, 189);
     
     text-align: center;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-input {
-    align-items: center;
+    display: block;
+    box-shadow: 0 10px 10px #5e5d5b;
 }
 
 #rowColCountForm {
@@ -60,46 +79,77 @@ input {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     padding: 50px 100px 100px 100px;
     margin: 100px;
+    width: 600px;
+    height: 750px;
+    border: 5px solid rgb(77, 91, 159);
+    border-radius: 20%;
+    background-color: rgb(219, 204, 180);
+    box-shadow: 0 15px 15px #5e5d5b;
 }
 
-.formButton {
+.resetButton {
     padding: 10px;
-    border-color: bisque;
-    color: #fff;
-    background-color: cornflowerblue;
+    border-color: rgb(3, 22, 115);
+    background-color: rgb(216, 206, 189);
     height: 40px;
-    width: 80px;
-    border-radius: 100%;
+    width: 70px;
+    border-radius: 25%;
+    margin: 50px 5px 5px 5px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 10px 10px #5e5d5b;
 }
 
-.formButton:hover {
+.rowColCountFormSubmitButton {
+    padding: 10px;
+
+    border-color: rgb(3, 22, 115);
+    background-color: rgb(216, 206, 189);
+
+    height: 40px;
+    width: 70px;
+    border-radius: 25%;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 10px 10px #5e5d5b;
+}
+
+.rowColCountFormSubmitButton:hover {
     background-color: darksalmon;
 }
 
-.refreshButton, .resetButton, .calculateButton, .randomizeMatricesButton {
-    margin: 10px;
+.backButtonTrue, .backButtonFalse, .calculateButton, .randomizeMatricesButton {
     padding: 20px;
+    margin: 15px 10px 10px 10px;
     border-color: bisque;
     color: #fff;
-    background-color: cornflowerblue;
+    background-color: rgb(77, 91, 159);
+    box-shadow: 0 10px 10px #5e5d5b;
     height: 50px;
     width: 100px;
     border-radius: 100%;
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
 }
 
 .error {
+    height: 10px;
     color: red;
+    text-align: center;
+    padding: 10px;
+}
+
+.errorBorder {
+    border-color: red;
 }
 
 .valueBox {
     margin: 5px;
     height: 40px;
-    width: 60px;
+    width: 70px;
     border-radius: 50%;
     text-align: center;
 }
