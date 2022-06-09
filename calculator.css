@@ -112,6 +112,38 @@ label {
     box-shadow: 0 5px 5px #000000;
 }
 
+.resetButtonSecond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 80%;
+    padding: 10px;
+    background-color: #bfcfe7;
+    height: 40px;
+    width: 70px;
+    margin: 30px auto 20px auto;
+    border-radius: 25%;
+    text-align: center;
+    box-shadow: 0 5px 5px #000000;
+}
+
+.randomizeMatricesButton, .backButtonTrue, .backButtonFalse, .calculateButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    opacity: 80%;
+    padding: 0px;
+    background-color: #bfcfe7;
+    height: 40px;
+    width: 100px;
+    border-radius: 25%;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 5px 5px #000000;
+}
+
 .rowColCountFormSubmitButton {
     opacity: 80%;
     padding: 10px;
@@ -119,28 +151,20 @@ label {
     height: 40px;
     width: 70px;
     border-radius: 25%;
-    margin: 5px;
+    margin: 10px;
     text-align: center;
     box-shadow: 0 5px 5px #000000;
 }
 
-.resetButton:hover, .rowColCountFormSubmitButton:hover {
+.resetButton:hover, .resetButtonSecond:hover, .rowColCountFormSubmitButton:hover, .randomizeMatricesButton:hover, .backButtonTrue:hover, .backButtonFalse:hover, .calculateButton:hover {
     opacity: 100%;
     border-color: #474056;
 }
 
-.backButtonTrue, .backButtonFalse, .calculateButton, .randomizeMatricesButton {
-    padding: 20px;
-    margin: 15px 10px 10px 10px;
-    border-color: bisque;
-    color: #fff;
-    background-color: rgb(77, 91, 159);
-    box-shadow: 0 5px 5px #000000;
-    height: 50px;
-    width: 100px;
-    border-radius: 100%;
-    /* display: flex;
-    justify-content: space-evenly; */
+.valueBoxTitle {
+    color: #365663;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .error {
@@ -154,15 +178,63 @@ label {
     border-color: red;
 }
 
-.valueBox {
-    margin: 5px;
+#valueBoxesForm {
+    padding: 50px;
+    width: 75%;
+    height: 50%;
+    margin: 20px auto;
+    border: 4px solid;
+    border-radius: 15%;
+    background-color: #abc0c9;
+    box-shadow: 0 10px 10px #000000;
+    border-color: #EAEAEA;
+}
+
+.valueBoxesM1Inputs, .valueBoxesM2Inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.valueBox { 
+    opacity: 80%;
+    margin: 10px auto;
     height: 40px;
-    width: 70px;
-    border-radius: 50%;
+    width: 80px;
+    border-radius: 25%;
+    background-color: #bfcfe7;
     text-align: center;
+    box-shadow: 0 5px 5px #000000;
 }
 
 .valueBoxTitle {
     padding: 10px;
     text-align: center;
+}
+
+.matrix1Inputs, .matrix2Inputs {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.solutionTitle {
+    color: #EAEAEA;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.solutionBox {
+    margin: auto;
+    height: 40px;
+    width: 100px;
+    color: #EAEAEA;
+    padding: 10px;
+    border: 4px solid;
+    border-radius: 20%;
+    background-color: #abc0c9;
+    box-shadow: 0 10px 10px #000000;
+    border-color: rgb(84, 94, 145);
 }

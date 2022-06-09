@@ -8,7 +8,7 @@ const m2cols = document.querySelector("#m2cols");
 const rules = document.querySelector(".rules");
 const form = document.querySelector("#rowColCountForm");
 
-const valueBoxesForm = document.querySelector("#valueBoxesForm");
+const valueBoxesFormArea = document.querySelector(".valueBoxesFormArea");
 const solutionArea = document.querySelector(".solution");
 const buttonArea = document.querySelector(".buttonArea");
 
@@ -41,32 +41,40 @@ function throwDimensionsError(){
 function runCalculator(){
     rules.remove();
     form.remove();
-    createValueBoxes(m1rows.value, m1cols.value, m2rows.value, m2cols.value);     
+    addValueBoxesForm();
+    createValueBoxes(m1rows.value, m1cols.value, m2rows.value, m2cols.value);    
+    createResetButton(); 
     createBackButton(false);
-    createResetButton();
     createRandomizeMatricesButton();
     createCalculateButton();
 }
 
+function addValueBoxesForm(){
+    valueBoxesFormArea.innerHTML += '<form id="valueBoxesForm"></form>';
+}
+
 function createValueBoxes(m1r, m1c, m2r, m2c){
     // Matrix 1
-    valueBoxesForm.innerHTML += '<p class="valueBoxTitle">Matrix 1</p>'
+    document.querySelector("#valueBoxesForm").innerHTML += '<p class="valueBoxTitle">Matrix 1</p>';
+    // document.querySelector("#valueBoxesForm").innerHTML += '<div class="matrix1Inputs"></div>';
     for (let i = 0; i < m1r; i++) {
         for (let j = 0; j < m1c; j++)
-            valueBoxesForm.innerHTML += `<input type="number" class="valueBox" id="m1valueBox${i}${j}" value="0"></input>`;
-        valueBoxesForm.innerHTML += "<div></div>";
+            document.querySelector("#valueBoxesForm").innerHTML += `<input type="number" class="valueBox" id="m1valueBox${i}${j}" value="0"></input>`;
+        document.querySelector("#valueBoxesForm").innerHTML += "<div></div>";
     }
 
     // Matrix 2
-    valueBoxesForm.innerHTML += '<p class="valueBoxTitle">Matrix 2</p>';
+    document.querySelector("#valueBoxesForm").innerHTML += '<p class="valueBoxTitle">Matrix 2</p>';
+    // document.querySelector("#valueBoxesForm").innerHTML += '<div class="matrix2Inputs"></div>';
     for (let i = 0; i < m2r; i++) {
         for (let j = 0; j < m2c; j++)
-            valueBoxesForm.innerHTML += `<input type="number" class="valueBox" id="m2valueBox${i}${j}" value="0"></input>`;
-        valueBoxesForm.innerHTML += "<div></div>";
-    }    
+            document.querySelector("#valueBoxesForm").innerHTML += `<input type="number" class="valueBox" id="m2valueBox${i}${j}" value="0"></input>`;
+        document.querySelector("#valueBoxesForm").innerHTML += "<div></div>";
+    }
 }
 
 function createBackButton(calculated){
+    buttonArea.innerHTML += '<div></div>';
     if (!calculated)
         buttonArea.innerHTML += '<a href="calculator.html"><button class="backButtonFalse" type="button">Back to Dimensions</button></a>';
     else
@@ -81,11 +89,12 @@ function removeBackButton(calculated){
 }
 
 function createResetButton(){
-    valueBoxesForm.innerHTML += '<button class="resetButton" type="reset">Reset</button>';
+    document.querySelector("#valueBoxesForm").innerHTML += '<button class="resetButtonSecond" type="reset">Reset</button>';
 }
 
 function createRandomizeMatricesButton(){
-    valueBoxesForm.innerHTML += '<button class="randomizeMatricesButton" type="button">Randomize Matrices</button>';
+    document.querySelector("#valueBoxesForm").innerHTML += '<div></div>';
+    document.querySelector("#valueBoxesForm").innerHTML += '<button class="randomizeMatricesButton" type="button">Randomize Matrices</button>';
     const randomizeMatricesButton = document.querySelector(".randomizeMatricesButton");
     randomizeMatricesButton.addEventListener("click", randomizeMatrices);
 }
@@ -95,6 +104,7 @@ function removeRandomizeMatricesButton(){
 }
 
 function createCalculateButton(){
+    buttonArea.innerHTML += '<div></div>';
     buttonArea.innerHTML += '<button class="calculateButton" type="button">Calculate the Product</button>';
     const calculateButton = document.querySelector(".calculateButton");
     calculateButton.addEventListener("click", calculateProduct);
@@ -105,7 +115,7 @@ function removeCalculateButton(){
 }
 
 function removeValueBoxesFormArea(){
-    valueBoxesForm.remove();
+    document.querySelector("#valueBoxesForm").remove();
 }
 
 function randomizeMatrices(){
@@ -114,12 +124,12 @@ function randomizeMatrices(){
     // Randomize Matrix 1
     for (let i = 0; i < Number(m1rows.value); i++)
         for (let j = 0; j < Number(m1cols.value); j++)
-            document.querySelector(`#m1valueBox${i}${j}`).value = produceRandomNumber(100);
+            document.querySelector(`#m1valueBox${i}${j}`).value = produceRandomNumber(50);
 
     // Randomize Matrix 2
     for (let i = 0; i < Number(m2rows.value); i++)
         for (let j = 0; j < Number(m2cols.value); j++)
-            document.querySelector(`#m2valueBox${i}${j}`).value = produceRandomNumber(100);        
+            document.querySelector(`#m2valueBox${i}${j}`).value = produceRandomNumber(50);        
 }
 
 function calculateProduct(err){
@@ -178,11 +188,10 @@ function updateMatrix(matrix, matrixNumber){
 }
 
 function displayMatrix(matrix){
-    solutionArea.innerHTML += "<p>Product:</p>"
-
+    solutionArea.innerHTML += '<p class="solutionTitle">Solution</p>';
     for (let i = 0; i < matrix.length; i++){
         for (let j = 0; j < matrix[i].length; j++)
-            solutionArea.innerHTML += `<span>${Number(matrix[i][j]).toFixed(2)}</span>`;
+            solutionArea.innerHTML += `<span class="solutionBox">${Number(matrix[i][j]).toFixed(2)}</span>`;
         solutionArea.innerHTML += "<div></div>";
     }
 }
