@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Roboto Mono', monospace;
-    background: rgb(232, 221, 183);
-    color: rgb(3, 22, 115);
+    background: #5a7d8c;
+    color: #365663;
 }
 
 a {
@@ -21,11 +21,10 @@ a {
 input, button {
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
-    color: rgb(105, 38, 105);
+    color: #365663;
 }
 
 .rowColCountFormTitle {
-    color: rgb(105, 38, 105);
     font-size: 26px;
     text-decoration: wavy;
     font-weight: bold;
@@ -35,7 +34,6 @@ input, button {
 }
 
 label {
-    color: rgb(105, 38, 105);
     font-size: 20px;
     text-align: center;
     padding: 20px;
@@ -45,34 +43,42 @@ label {
 }
 
 .rules {
+    padding: 70px 70px 60px 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin: 20px auto;
     font-weight: bold;
     text-align: center;
-    width: 600px;
+    width: 500px;
     height: 100px;
-    padding-top: 100px;
     font-size: 18px;
-    border: 5px solid rgb(77, 91, 159);
-    background-color: rgb(219, 204, 180);
-    color: rgb(105, 38, 105);
-    box-shadow: 0 15px 15px #5e5d5b;
+    border-radius: 40%;
+    border: 3px solid;
+    background-color: #abc0c9;
+    box-shadow: 0 10px 10px #000000;
+    border-color: #EAEAEA;
+}
+
+.rules:hover {
+    border-color: #474056;
 }
 
 #m1rows, #m1cols, #m2rows, #m2cols {
+    opacity: 80%;
     margin: 0 auto;
     height: 40px;
     width: 60px;
     border-radius: 25%;
-    background-color: rgb(216, 206, 189);
-    
+    background-color: #bfcfe7;
     text-align: center;
-
     display: block;
-    box-shadow: 0 10px 10px #5e5d5b;
+    box-shadow: 0 5px 5px #000000;
 }
+
+#m1rows:hover, #m1cols:hover, #m2rows:hover, #m2cols:hover {
+    opacity: 100%;
+} 
 
 #rowColCountForm {
     display: flex;
@@ -82,42 +88,45 @@ label {
     padding: 50px 100px 100px 100px;
     width: 600px;
     height: 750px;
-    border: 5px solid rgb(77, 91, 159);
+    margin: auto;
+    border: 4px solid;
     border-radius: 20%;
-    background-color: rgb(219, 204, 180);
-    box-shadow: 0 15px 15px #5e5d5b;
+    background-color: #abc0c9;
+    box-shadow: 0 10px 10px #000000;
+    border-color: #EAEAEA;
+}
+
+#rowColCountForm:hover {
+    border-color: #474056;
 }
 
 .resetButton {
+    opacity: 80%;
     padding: 10px;
-    border-color: rgb(3, 22, 115);
-    background-color: rgb(216, 206, 189);
+    background-color: #bfcfe7;
     height: 40px;
     width: 70px;
     border-radius: 25%;
     margin: 50px 5px 5px 5px;
     text-align: center;
-    display: inline-block;
-    box-shadow: 0 10px 10px #5e5d5b;
+    box-shadow: 0 5px 5px #000000;
 }
 
 .rowColCountFormSubmitButton {
+    opacity: 80%;
     padding: 10px;
-
-    border-color: rgb(3, 22, 115);
-    background-color: rgb(216, 206, 189);
-
+    background-color: #bfcfe7;
     height: 40px;
     width: 70px;
     border-radius: 25%;
     margin: 5px;
     text-align: center;
-    display: inline-block;
-    box-shadow: 0 10px 10px #5e5d5b;
+    box-shadow: 0 5px 5px #000000;
 }
 
-.rowColCountFormSubmitButton:hover {
-    background-color: darksalmon;
+.resetButton:hover, .rowColCountFormSubmitButton:hover {
+    opacity: 100%;
+    border-color: #474056;
 }
 
 .backButtonTrue, .backButtonFalse, .calculateButton, .randomizeMatricesButton {
@@ -126,7 +135,7 @@ label {
     border-color: bisque;
     color: #fff;
     background-color: rgb(77, 91, 159);
-    box-shadow: 0 10px 10px #5e5d5b;
+    box-shadow: 0 5px 5px #000000;
     height: 50px;
     width: 100px;
     border-radius: 100%;

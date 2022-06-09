@@ -68,9 +68,9 @@ function createValueBoxes(m1r, m1c, m2r, m2c){
 
 function createBackButton(calculated){
     if (!calculated)
-        buttonArea.innerHTML += '<a href="dimensions.html"><button class="backButtonFalse" type="button">Back to Dimensions</button></a>';
+        buttonArea.innerHTML += '<a href="calculator.html"><button class="backButtonFalse" type="button">Back to Dimensions</button></a>';
     else
-        buttonArea.innerHTML += '<a href="dimensions.html"><button class="backButtonTrue" type="button">Calculate Another!</button></a>';
+        buttonArea.innerHTML += '<a href="calculator.html"><button class="backButtonTrue" type="button">Calculate Another!</button></a>';
 }
 
 function removeBackButton(calculated){
