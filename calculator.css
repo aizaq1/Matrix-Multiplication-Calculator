@@ -1,240 +1,357 @@
 * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    line-height: 1em; 
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1em;
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
-    background: #5a7d8c;
-    color: #365663;
+  font-family: "Roboto Mono", monospace;
+  background: #5a7d8c;
+  color: #365663;
 }
 
 a {
-    display: inline-block;
-    line-height: 1em;
-    width: 100px;
-    text-decoration: none;
+  display: inline-block;
+  line-height: 1em;
+  width: 100px;
+  text-decoration: none;
 }
 
-input, button {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    color: #365663;
+input,
+button {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  color: #365663;
 }
 
 .rowColCountFormTitle {
-    font-size: 26px;
-    text-decoration: wavy;
-    font-weight: bold;
-    margin: 20px;
-    padding: 5px;
-    border-bottom: 1px solid rgb(77, 91, 159);
+  font-size: 26px;
+  text-decoration: wavy;
+  font-weight: bold;
+  margin: 20px;
+  padding: 5px;
+  border-bottom: 1px solid rgb(77, 91, 159);
 }
 
 label {
-    font-size: 20px;
-    text-align: center;
-    padding: 20px;
-    font-weight: 700;
-    display: block;
-    margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 700;
+  display: block;
+  margin: 0 auto;
 }
 
 .rules {
-    padding: 70px 70px 60px 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    font-weight: bold;
-    text-align: center;
-    width: 500px;
-    height: 100px;
-    font-size: 18px;
-    border-radius: 40%;
-    border: 3px solid;
-    background-color: #abc0c9;
-    box-shadow: 0 10px 10px #000000;
-    border-color: #EAEAEA;
+  padding: 70px 70px 60px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  font-weight: bold;
+  text-align: center;
+  width: 500px;
+  height: 100px;
+  font-size: 18px;
+  border-radius: 40%;
+  border: 3px solid;
+  background-color: #abc0c9;
+  box-shadow: 0 10px 10px #000000;
+  border-color: #eaeaea;
 }
 
 .rules:hover {
-    border-color: #474056;
+  border-color: #474056;
 }
 
-#m1rows, #m1cols, #m2rows, #m2cols {
-    opacity: 80%;
-    margin: 0 auto;
-    height: 40px;
-    width: 60px;
-    border-radius: 25%;
-    background-color: #bfcfe7;
-    text-align: center;
-    display: block;
-    box-shadow: 0 5px 5px #000000;
-}
-
-#m1rows:hover, #m1cols:hover, #m2rows:hover, #m2cols:hover {
-    opacity: 100%;
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 } 
 
+.solutionBoxesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto 0px auto;
+}
+
+.backButtonFalseContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backButtonTrueContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dimensionFormButtons {
+  display: block;
+  justify-content: center;
+}
+
+.inputFormButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin: auto;
+}
+
+#m1rows,
+#m1cols,
+#m2rows,
+#m2cols {
+  opacity: 80%;
+  margin: 0 auto;
+  height: 40px;
+  width: 60px;
+  border-radius: 25%;
+  background-color: #bfcfe7;
+  text-align: center;
+  display: block;
+  box-shadow: 0 5px 5px #000000;
+}
+
+#m1rows:hover,
+#m1cols:hover,
+#m2rows:hover,
+#m2cols:hover {
+  opacity: 100%;
+}
+
 #rowColCountForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 100px 100px 100px;
-    width: 600px;
-    height: 750px;
-    margin: auto;
-    border: 4px solid;
-    border-radius: 20%;
-    background-color: #abc0c9;
-    box-shadow: 0 10px 10px #000000;
-    border-color: #EAEAEA;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px 100px 100px;
+  width: 600px;
+  height: 750px;
+  margin: auto;
+  border: 4px solid;
+  border-radius: 20%;
+  background-color: #abc0c9;
+  box-shadow: 0 10px 10px #000000;
+  border-color: #eaeaea;
 }
 
 #rowColCountForm:hover {
-    border-color: #474056;
+  border-color: #474056;
 }
 
 .resetButton {
-    opacity: 80%;
-    padding: 10px;
-    background-color: #bfcfe7;
-    height: 40px;
-    width: 70px;
-    border-radius: 25%;
-    margin: 50px 5px 5px 5px;
-    text-align: center;
-    box-shadow: 0 5px 5px #000000;
+  opacity: 80%;
+  padding: 10px;
+  background-color: #bfcfe7;
+  height: 40px;
+  width: 70px;
+  border-radius: 25%;
+  margin: 50px 5px 5px 5px;
+  text-align: center;
+  box-shadow: 0 5px 5px #000000;
+  border-color: #365663;
 }
 
 .resetButtonSecond {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    opacity: 80%;
-    padding: 10px;
-    background-color: #bfcfe7;
-    height: 40px;
-    width: 70px;
-    margin: 30px auto 20px auto;
-    border-radius: 25%;
-    text-align: center;
-    box-shadow: 0 5px 5px #000000;
+  opacity: 80%;
+  padding: 10px;
+  background-color: #bfcfe7;
+  height: 40px;
+  width: 100px;
+  margin: 30px 2.5px auto auto;
+  border-radius: 25%;
+  text-align: center;
+  box-shadow: 0 5px 5px #000000;
+  border-color: #365663;
 }
 
-.randomizeMatricesButton, .backButtonTrue, .backButtonFalse, .calculateButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    opacity: 80%;
-    padding: 0px;
-    background-color: #bfcfe7;
-    height: 40px;
-    width: 100px;
-    border-radius: 25%;
-    margin: auto;
-    text-align: center;
-    box-shadow: 0 5px 5px #000000;
+.randomizeMatricesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 80%;
+  padding: 0px;
+  background-color: #bfcfe7;
+  height: 40px;
+  width: 100px;
+  border-radius: 25%;
+  margin: 30px auto auto 2.5px;
+  text-align: center;
+  box-shadow: 0 5px 5px #000000;
+  border-color: #365663;
 }
+
+.backButtonFalse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 80%;
+  padding: 0px;
+  background-color: #bfcfe7;
+  height: 40px;
+  width: 100px;
+  border-radius: 25%;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 5px 5px #000000;
+  border-color: #365663;
+}
+
+.backButtonTrue {
+  opacity: 80%;
+  padding: 0px;
+  background-color: #bfcfe7;
+  height: 40px;
+  width: 100px;
+  border-radius: 25%;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 5px 5px #000000;
+  border-color: #365663;
+}
+
+.calculateButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 80%;
+  padding: 0px;
+  background-color: #bfcfe7;
+  height: 40px;
+  width: 100px;
+  border-radius: 25%;
+  margin: 5px;
+  text-align: center;
+  box-shadow: 0 5px 5px #000000;
+  border-color: #365663;
+} 
 
 .rowColCountFormSubmitButton {
-    opacity: 80%;
-    padding: 10px;
-    background-color: #bfcfe7;
-    height: 40px;
-    width: 70px;
-    border-radius: 25%;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0 5px 5px #000000;
+  opacity: 80%;
+  padding: 10px;
+  background-color: #bfcfe7;
+  height: 40px;
+  width: 70px;
+  border-radius: 25%;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 5px 5px #000000;
+  border-color: #365663;
 }
 
-.resetButton:hover, .resetButtonSecond:hover, .rowColCountFormSubmitButton:hover, .randomizeMatricesButton:hover, .backButtonTrue:hover, .backButtonFalse:hover, .calculateButton:hover {
-    opacity: 100%;
-    border-color: #474056;
+.resetButton:hover,
+.resetButtonSecond:hover,
+.rowColCountFormSubmitButton:hover,
+.randomizeMatricesButton:hover,
+.backButtonTrue:hover,
+.backButtonFalse:hover,
+.calculateButton:hover {
+  opacity: 100%;
+  border-color: #474056;
 }
 
 .valueBoxTitle {
-    color: #365663;
-    font-size: 20px;
-    font-weight: bold;
+  color: #365663;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .error {
-    height: 10px;
-    color: red;
-    text-align: center;
-    padding: 10px;
+  height: 10px;
+  color: red;
+  text-align: center;
+  padding: 10px;
 }
 
 .errorBorder {
-    border-color: red;
+  border-color: red;
 }
 
 #valueBoxesForm {
-    padding: 50px;
-    width: 75%;
-    height: 50%;
-    margin: 20px auto;
-    border: 4px solid;
-    border-radius: 15%;
-    background-color: #abc0c9;
-    box-shadow: 0 10px 10px #000000;
-    border-color: #EAEAEA;
+  padding: 30px;
+  width: 75%;
+  height: 50%;
+  margin: 20px auto;
+  border: 4px solid;
+  border-radius: 15%;
+  background-color: #abc0c9;
+  box-shadow: 0 10px 10px #000000;
+  border-color: #eaeaea;
 }
 
-.valueBoxesM1Inputs, .valueBoxesM2Inputs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.valueBoxesM1Inputs,
+.valueBoxesM2Inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.valueBox { 
-    opacity: 80%;
-    margin: 10px auto;
-    height: 40px;
-    width: 80px;
-    border-radius: 25%;
-    background-color: #bfcfe7;
-    text-align: center;
-    box-shadow: 0 5px 5px #000000;
+.valueBox {
+  opacity: 80%;
+  margin: 5px;
+  height: 40px;
+  width: 80px;
+  border-radius: 25%;
+  background-color: #bfcfe7;
+  text-align: center;
+  box-shadow: 0 5px 5px #000000;
+}
+
+.valueBox:hover {
+  opacity: 100%;
+  background-color: #9db3d5;
 }
 
 .valueBoxTitle {
-    padding: 10px;
-    text-align: center;
+  padding: 10px;
+  text-align: center;
 }
 
-.matrix1Inputs, .matrix2Inputs {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
+.matrix1Inputs,
+.matrix2Inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .solutionTitle {
-    color: #EAEAEA;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 50px 0px;
+  color: #eaeaea;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 150px 0px 0px 0px;
 }
 
 .solutionBox {
-    margin: auto;
-    height: 40px;
-    width: 100px;
-    color: #EAEAEA;
-    padding: 10px;
-    border: 4px solid;
-    border-radius: 20%;
-    background-color: #abc0c9;
-    box-shadow: 0 10px 10px #000000;
-    border-color: rgb(84, 94, 145);
+  display: inline-block;
+  text-align: center;
+  margin: 5px;
+  height: 40px;
+  width: 100px;
+  color: rgb(84, 94, 145);
+  padding: 10px;
+  border: 4px solid;
+  border-radius: 20%;
+  background-color: #abc0c9;
+  box-shadow: 0 10px 10px #000000;
+  border-color: rgb(84, 94, 145);
 }

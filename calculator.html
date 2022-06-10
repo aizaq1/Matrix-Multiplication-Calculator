@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matrix Multiplication Calculator - Dimensions</title>
-    <link rel="stylesheet" href="calculator.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="calculator.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="rules">
-        All inputs must be positive and no greater than 10. The number of columns in matrix 1 must be equal to the number of rows in matrix 2.
+      All inputs must be positive and no greater than 10. The number of columns
+      in matrix 1 must be equal to the number of rows in matrix 2.
     </div>
     <div class="form">
-        <form id="rowColCountForm">
-            <div class="rowColCountFormTitle">Dimensions</div>
-            <div class="inputtedDimensions">
-                <label>Number of Rows in Matrix 1</label>
-                <input type="number" id="m1rows" value="1" min="1" max="10" oninput="validity.valid||(value='');">            
-                <label>Number of Columns in Matrix 1</label>
-                <input type="number" id="m1cols" value="1" min="1" max="10" oninput="validity.valid||(value='');">            
-                <label>Number of Rows in Matrix 2</label>
-                <input type="number" id="m2rows" value="1" min="1" max="10" oninput="validity.valid||(value='');">            
-                <label>Number of Columns in Matrix 2</label>
-                <input type="number" id="m2cols" value="1" min="1" max="10" oninput="validity.valid||(value='');">            
-            </div>  
-            <button class="resetButton" type="reset">Reset</button>
-            <button class="rowColCountFormSubmitButton" type="submit">Go!</button>  
-            <div class="dimensionErrorArea"></div>
-        </form>
-        <div class="valueBoxesFormArea"></div>
-        <div class="solution"></div>
-        <div class="buttonArea"></div>
+      <form id="rowColCountForm">
+        <div class="rowColCountFormTitle">Dimensions</div>
+        <div class="inputtedDimensions">
+          <label>Number of Rows in Matrix 1</label>
+          <input
+            type="number"
+            id="m1rows"
+            value="1"
+            min="1"
+            max="10"
+            oninput="validity.valid||(value='');"
+          />
+          <label>Number of Columns in Matrix 1</label>
+          <input
+            type="number"
+            id="m1cols"
+            value="1"
+            min="1"
+            max="10"
+            oninput="validity.valid||(value='');"
+          />
+          <label>Number of Rows in Matrix 2</label>
+          <input
+            type="number"
+            id="m2rows"
+            value="1"
+            min="1"
+            max="10"
+            oninput="validity.valid||(value='');"
+          />
+          <label>Number of Columns in Matrix 2</label>
+          <input
+            type="number"
+            id="m2cols"
+            value="1"
+            min="1"
+            max="10"
+            oninput="validity.valid||(value='');"
+          />
+        </div>
+        <div class="dimensionFormButtons">
+          <button class="resetButton" type="reset">Reset</button>
+          <button class="rowColCountFormSubmitButton" type="submit">Go!</button>
+        </div>  
+        <div class="dimensionErrorArea"></div>
+      </form>
+      <div class="valueBoxesFormArea"></div>
+      <div class="solution"></div>
+      <div class="buttonArea"></div>
     </div>
     <script src="calculator.js"></script>
-</body>
+  </body>
 </html>
