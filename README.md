@@ -1,4 +1,4 @@
-# Matrix Multiplication Calculator
+# Matrix Product Calculator
 
 This is a calculator written in JavaScript to compute matrix products.
 
