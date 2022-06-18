@@ -101,14 +101,14 @@ function createBackButton(calculated) {
   if (!calculated) {
     buttonArea.innerHTML += '<div class="backButtonFalseContainer"></div>';
     document.querySelector(".backButtonFalseContainer").innerHTML +=
-      '<a href="calculator.html"><button class="backButtonFalse" type="button">Back to Dimensions</button></a>';
+      '<a href="index.html"><button class="backButtonFalse" type="button">Back to Dimensions</button></a>';
   }
   else {
     buttonArea.innerHTML += '<div class="backButtonTrueContainer"></div>';
     document.querySelector(".backButtonFalseContainer").remove();
     document.querySelector(".backButtonTrueContainer").innerHTML += "<br>";
     document.querySelector(".backButtonTrueContainer").innerHTML +=
-      '<a href="calculator.html"><button class="backButtonTrue" type="button">Calculate Another!</button></a>';
+      '<a href="index.html"><button class="backButtonTrue" type="button">Calculate Another!</button></a>';
   }
 }
 
