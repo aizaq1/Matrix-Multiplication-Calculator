@@ -1,3 +1,5 @@
+document.body.style.zoom="80%"
+
 const dimensionErrorArea = document.querySelector(".dimensionErrorArea");
 
 const m1rows = document.querySelector("#m1rows");
