@@ -28,9 +28,8 @@
       in matrix 1 must be equal to the number of rows in matrix 2.
     </div>
     <div class="form">
-      <form id="rowColCountForm">
-        <div class="rowColCountFormTitle">Dimensions</div>
-        <div class="inputtedDimensions">
+      <form id="dimensionsForm">
+        <div class="dimensionsFormTitle">Dimensions</div>
           <label>Number of Rows in Matrix 1</label>
           <input
             type="number"
@@ -67,15 +66,14 @@
             max="10"
             oninput="validity.valid||(value='');"
           />
-        </div>
-        <div class="dimensionFormButtons">
-          <button class="resetButton" type="reset">Reset</button>
-          <button class="rowColCountFormSubmitButton" type="submit">Go!</button>
+        <div class="dimensionsFormButtons">
+          <button class="resetDimensionsButton" type="reset">Reset</button>
+          <button class="submitDimensionsButton" type="submit">Go!</button>
         </div>  
         <div class="dimensionErrorArea"></div>
       </form>
-      <div class="valueBoxesFormArea"></div>
-      <div class="solution"></div>
+      <div class="inputBoxesFormArea"></div>
+      <div class="solutionArea"></div>
       <div class="buttonArea"></div>
     </div>
     <script src="calculator.js"></script>

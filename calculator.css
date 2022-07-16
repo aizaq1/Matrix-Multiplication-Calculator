@@ -1,7 +1,3 @@
-#my {
-  zoom: 80%;
-}
-
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -29,7 +25,7 @@ button {
   color: #365663;
 }
 
-.rowColCountFormTitle {
+.dimensionsFormTitle {
   font-size: 26px;
   text-decoration: wavy;
   font-weight: bold;
@@ -82,13 +78,13 @@ label {
   margin: 25px auto 0px auto;
 }
 
-.backButtonFalseContainer {
+.mainMenuButtonContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.backButtonTrueContainer {
+.calculateAnotherButtonContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +96,7 @@ label {
   align-items: center;
 }
 
-.dimensionFormButtons {
+.dimensionsFormButtons {
   display: block;
   justify-content: center;
 }
@@ -135,7 +131,7 @@ label {
   opacity: 100%;
 }
 
-#rowColCountForm {
+#dimensionsForm {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -151,11 +147,11 @@ label {
   border-color: #eaeaea;
 }
 
-#rowColCountForm:hover {
+#dimensionsForm:hover {
   border-color: #474056;
 }
 
-.resetButton {
+.resetDimensionsButton {
   opacity: 80%;
   padding: 10px;
   background-color: #bfcfe7;
@@ -168,7 +164,7 @@ label {
   border-color: #365663;
 }
 
-.resetButtonSecond {
+.resetInputsButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,7 +198,7 @@ label {
   border-color: #365663;
 }
 
-.backButtonFalse {
+.mainMenuButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,7 +215,7 @@ label {
   border-color: #365663;
 }
 
-.backButtonTrue {
+.calculateAnotherButton {
   opacity: 80%;
   padding: 0px;
   background-color: #bfcfe7;
@@ -249,7 +245,7 @@ label {
   border-color: #365663;
 } 
 
-.rowColCountFormSubmitButton {
+.submitDimensionsButton {
   opacity: 80%;
   padding: 10px;
   background-color: #bfcfe7;
@@ -262,18 +258,18 @@ label {
   border-color: #365663;
 }
 
-.resetButton:hover,
-.resetButtonSecond:hover,
-.rowColCountFormSubmitButton:hover,
+.resetDimensionsButton:hover,
+.resetInputsButton:hover,
+.submitDimensionsButton:hover,
 .randomizeMatricesButton:hover,
-.backButtonTrue:hover,
-.backButtonFalse:hover,
+.calculateAnotherButton:hover,
+.mainMenuButton:hover,
 .calculateButton:hover {
   opacity: 100%;
   border-color: #474056;
 }
 
-.valueBoxTitle {
+.inputBoxTitle {
   color: #365663;
   font-size: 20px;
   font-weight: bold;
@@ -290,7 +286,7 @@ label {
   border-color: red;
 }
 
-#valueBoxesForm {
+#inputBoxesForm {
   padding: 30px;
   width: 75%;
   height: 50%;
@@ -302,14 +298,14 @@ label {
   border-color: #eaeaea;
 }
 
-.valueBoxesM1Inputs,
-.valueBoxesM2Inputs {
+.inputBoxesM1Inputs,
+.inputBoxesM2Inputs {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.valueBox {
+.inputBox {
   opacity: 80%;
   margin: 5px;
   height: 40px;
@@ -320,12 +316,12 @@ label {
   box-shadow: 0 5px 5px #000000;
 }
 
-.valueBox:hover {
+.inputBox:hover {
   opacity: 100%;
   background-color: #9db3d5;
 }
 
-.valueBoxTitle {
+.inputBoxTitle {
   padding: 10px;
   text-align: center;
 }
